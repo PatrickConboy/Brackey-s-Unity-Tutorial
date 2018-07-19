@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	public Rigidbody rb;
 
 	public float forwardForce = 2000f;
+	public float sidewaysForce = 500f;
 	
 	// Update is called once per frame 
 	// FixedUpdate is better when messing with physics stuff
@@ -13,5 +14,15 @@ public class PlayerMovement : MonoBehaviour {
 		
 		// Add a forward force to our player
 		rb.AddForce(0, 0, forwardForce * Time.deltaTime); 
+
+		// Move player to right when d is pressed
+		if ( Input.GetKey("d") ) {
+			rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+		}
+
+		// Move player to left when a is pressed
+		if ( Input.GetKey("a") ) {
+			rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+		}
 	}
 }
