@@ -17,12 +17,12 @@ public class PlayerMovement : MonoBehaviour {
 
 		// Move player to right when d is pressed
 		if ( Input.GetKey("d") ) {
-			rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+			rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 		}
 
 		// Move player to left when a is pressed
 		if ( Input.GetKey("a") ) {
-			rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+			rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 		}
 	}
 }
