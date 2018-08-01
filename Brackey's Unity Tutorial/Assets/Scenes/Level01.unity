@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: ae4bffde3f5e19744b8aa3f8abf0bebe,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -579,6 +580,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114470504573891522, guid: 2fb67aa034a48c64ea7b1490733f42fb,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 946611352}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb67aa034a48c64ea7b1490733f42fb, type: 2}
   m_IsPrefabAsset: 0
@@ -655,6 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016a8877d1394d548b6a694b8dac3a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartDelay: 2
 --- !u!4 &946611353
 Transform:
   m_ObjectHideFlags: 0
